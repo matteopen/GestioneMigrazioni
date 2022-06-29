@@ -60,4 +60,13 @@ public class Model {
 		return null;
 
 	}
+	
+	public void simula(Country partenza) {
+		
+		Simulatore sim = new Simulatore(this.graph);
+		sim.init(partenza, 1000);
+		sim.run();
+		System.out.println("Passi: "+ sim.getnPassi()+"\n");
+		System.out.println("Persone: "+sim.getPersone()+"\n");
+	}
 }
